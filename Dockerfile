@@ -4,7 +4,7 @@ ARG GIT_REF=develop
 
 ADD https://github.com/ddclient/ddclient/archive/${GIT_REF}.tar.gz /ddclient.tar.gz
 
-RUN apk add --no-cache make autoconf automake wget && \
+RUN apk add --no-cache make autoconf automake curl && \
     tar -xvf /ddclient.tar.gz -C / && \
     cd /ddclient-* && \
     ./autogen && \
