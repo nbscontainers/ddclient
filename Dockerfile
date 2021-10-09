@@ -17,7 +17,7 @@ RUN apk add --no-cache make autoconf automake wget && \
 
 FROM docker.io/alpine:latest
 
-RUN apk add --no-cache perl
+RUN apk add --no-cache perl perl-io-socket-ssl perl-io-socket-inet6 perl-json curl
 
 COPY --from=builder /ddclient-install/ /
 
